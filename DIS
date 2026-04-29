@@ -1,10 +1,16 @@
 #!/usr/bin/env bash
 
-echo "Discord Install Script"
+echo "+------------------------+"
+echo "| Discord Install Script |"
+echo "+------------------------+"
 
-read -p "Discord version (z.B. 135):" version
+version=$(jq -r '.version' /opt/discord/resources/build_info.json)
 
-echo "Discord version 0.0.$version"
+echo $version
+
+echo ""
+echo "${version%.*}.$((${version##*.} + 1))"
+echo ""
 
 cd ~/Downloads
 
@@ -14,7 +20,9 @@ tar -xzvf discord.tar.gz
 
 rm -rf discord.tar.gz
 
-echo "Discord should be Installed!"
-echo "Have a nice Chat!"
+echo "+------------------------------+"
+echo "| Discord should be Installed! |"
+echo "| Have a nice Chat!            |"
+echo "+------------------------------+"
 
 exit 1
