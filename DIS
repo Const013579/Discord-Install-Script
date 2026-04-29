@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+echo "Discord Install Script"
+
+read -p "Discord version (z.B. 135):" version
+
+echo "Discord version 0.0.$version"
+
+cd ~/Downloads
+
+curl https://stable.dl2.discordapp.net/apps/linux/0.0.135/discord-0.0.$version.tar.gz --output discord.tar.gz
+
+tar -xzvf discord.tar.gz
+
+rm -rf discord.tar.gz
+
+echo "Discord should be Installed!"
+echo "Have a nice Chat!"
+
+exit 1
