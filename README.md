@@ -1,6 +1,6 @@
 mv ~/Downloads/DIS /usr/local/bin/DIS
 
-Arch Linux
+Arch Linux:
   sudo pacman -S jq
 
 Execute:
